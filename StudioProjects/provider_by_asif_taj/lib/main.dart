@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider_by_asif_taj/statefull_widgets.dart';
 import 'package:provider_by_asif_taj/stateless_widgets.dart';
+import 'package:provider_by_asif_taj/why_provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
 
-      home:  StatefullWidgets(),
+      home:  WhyProvider(),
     );
   }
 }
