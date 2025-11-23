@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:provider_by_asif_taj/provider/auth_provider.dart';
 import 'package:provider_by_asif_taj/provider/count_provider.dart';
 import 'package:provider_by_asif_taj/provider/example_one_provider.dart';
 import 'package:provider_by_asif_taj/provider/favourite_provider.dart';
@@ -7,6 +8,7 @@ import 'package:provider_by_asif_taj/provider/theme_changer_provider.dart';
 import 'package:provider_by_asif_taj/screens/count_example.dart';
 import 'package:provider_by_asif_taj/screens/count_example_one.dart';
 import 'package:provider_by_asif_taj/screens/favourate/favourite_screen.dart';
+import 'package:provider_by_asif_taj/screens/login.dart';
 import 'package:provider_by_asif_taj/screens/theme_example/dark_theme.dart';
 import 'package:provider_by_asif_taj/screens/value_notifyListener.dart';
 import 'package:provider_by_asif_taj/statefull_widgets.dart';
@@ -31,6 +33,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_)=>CountExampleOne()),
         ChangeNotifierProvider(create: (_)=>FavouriteItemsProvider()),
         ChangeNotifierProvider(create: (_)=>ThemeChangerProvider()),
+        ChangeNotifierProvider(create: (_)=>AuthProvider()),
     ],
     child: Builder(
       builder: (BuildContext context) {
@@ -47,7 +50,7 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.yellow,
             primaryColor: Colors.purple
           ),
-          home: ValueNotifylistener(),
+          home: Login(),
         );
       }
     ),
